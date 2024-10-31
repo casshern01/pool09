@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casshern Game Emulator</title>
+    <style>
+        /* 全体の背景色を黒に設定 */
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        /* タイトルのスタイル */
+        .title {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Casshern Game Emulator</h1> <!-- タイトルを表示 -->
+    <div style='width:640px;height:480px;max-width:100%; background-color: #333;'>
+        <div id='game'></div>
+    </div>
+
+    <script type='text/javascript'>
+        EJS_player = '#game';
+        EJS_core = 'gb';  // Game Boyエミュレーション
+        EJS_biosUrl = ''; // BIOSファイルは不要
+        EJS_gameUrl = 'data/pool1.gbc';  // ROMファイルのパス
+        EJS_pathtodata = 'data/'; // dataディレクトリへのパス
+        EJS_autostart = true; // 自動スタートを有効化
+    </script>
+    <script src='data/loader.js'></script> <!-- エミュレーターのローダー -->
+</body>
+</html>
